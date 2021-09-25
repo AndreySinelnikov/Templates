@@ -1,1 +1,1 @@
-pm.collectionVariables.set("actualValue", pm.request.url.variables.get("pathVariable"));
+pm.collectionVariables.set("pathVariableActualValue", pm.request.url.variables.get("pathVariable"));
