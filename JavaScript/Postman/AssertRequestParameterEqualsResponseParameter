@@ -1,0 +1,5 @@
+pm.test("Request parameter 'name' is equal to response parameter 'name' ", function () {
+    var actualJson = pm.response.json();
+    var expectedName = decodeURIComponent(pm.request.url.query.get("name"));  // since spaces in request URL are replaced with %20
+    pm.expect(actualJson.name).to.eql(expectedName);
+});
