@@ -1,5 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="XMLParameterizedSuite">
+  <parameter name="firstParam" value="someValue"></parameter>
+  <parameter name="secondParameter" value="someOtherValue"></parameter>
   <test name="TestExample">
     <classes>
       <class name="TestClass"/>
