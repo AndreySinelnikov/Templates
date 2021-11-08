@@ -1,0 +1,6 @@
+@BeforeClass
+public void before() {
+    sparklinesPage.open();
+    // open can go too fast and force all subsequent checks to fail
+    waitCondition(() -> sparklinesPage.isOpened());
+}
