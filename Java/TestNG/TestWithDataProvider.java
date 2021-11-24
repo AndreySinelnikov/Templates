@@ -12,3 +12,5 @@ public void testOperatingOnData(String testId, String text, int number) {
 }
 
 // testId is not used in test body; it serves to describe an individual row of test data
+
+// note that test data array elements can be of reference type: you can cycle through, for example, Page Object fields that way
