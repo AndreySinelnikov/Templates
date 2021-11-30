@@ -1,0 +1,3 @@
+// Run this while in project directory, replacing CAPSNAMES with actual values
+
+mvn install:install-file -DgroupId="GROUPID" -DartifactId="ARTIFACTID" -Dversion="VERSION" -Dfile="JARFILEPATH" -Dpackaging="jar" -DgeneratePom="true"
