@@ -1,0 +1,13 @@
+// Concerning the counterintuitive ordering of compared items:
+// it is there to sort of function as a null check.
+// Look at this fragment of code:
+
+private static final String CHROME = "CHROME";
+
+public void createdDriver(String browserName) {
+  if (CHROME.equalsIgnoreCase(browserName)) {...}
+}
+
+// If browserName value is actually null, this condition will evaluate as 'false'.
+// However, condition formulated as 'browserName.equalsIgnoreCase(CHROME)' will lead to NPE in this case.
+// The same is true for equals() and in fact stems from method contracts that specify this behavior. 
