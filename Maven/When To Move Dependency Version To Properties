@@ -1,0 +1,29 @@
+// CASE 1:
+// Multiple dependencies referring to an "umbrella version" of one product family
+
+<properties>
+        <log4j2.version>2.16.0</log4j2.version>
+</properties>
+
+<dependencies>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+</dependencies>
+
+// CASE 2:
+// You have a multi-module project, with modules being dependent on each other. Project version is bumped simultaneously in all POM files.
+
+// In the other cases, scrolling to properties to find out the artifact's version is generally a waste of time.
