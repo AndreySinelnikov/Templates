@@ -1,0 +1,3 @@
+// Like when you want something like Set<String> to render properly in Slate documentation:
+
+Set\<String>
