@@ -1,2 +1,11 @@
-let title = await browser.$('h2.tile__title');  // without browser, $ will likely spit an exception
-console.log('title text: ' + await title.getText());  // without await, you'll get a promise out of getText()
+describe('Some verifications', async function () {
+	it('First verification', async function () {
+    let title = await browser.$('h2.tile__title');  // without browser, $ will likely spit an exception
+    console.log('title text: ' + await title.getText());  // without await, you'll get a promise out of getText()
+  });
+});
+
+// it seems useful to treat await as something that guarantees resolution of a promise that might be returned from a function call
+
+
+
