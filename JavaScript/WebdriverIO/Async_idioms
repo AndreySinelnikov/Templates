@@ -1,0 +1,2 @@
+let title = await browser.$('h2.tile__title');  // without browser, $ will likely spit an exception
+console.log('title text: ' + await title.getText());  // without await, you'll get a promise out of getText()
