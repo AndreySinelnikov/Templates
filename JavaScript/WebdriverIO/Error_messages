@@ -1,0 +1,7 @@
+Error: Unable to load spec files quite likely because they rely on `browser` object that is not fully initialised.
+`browser` object has only `capabilities` and some flags like `isMobile`.
+Helper files that use other `browser` commands have to be moved to `before` hook.
+
+COULD MEAN:
+
+import statement "../../../importedFromHere" points to a wrong location 
