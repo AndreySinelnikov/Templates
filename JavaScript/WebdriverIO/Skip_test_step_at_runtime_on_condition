@@ -1,0 +1,8 @@
+it('Flyout can be opened/closed for PCP', async function () {
+    // check if there is a property in JSON test data
+		if (typeof (await tstdata['pcp']) === 'undefined') {
+			this.skip();
+		} else {
+			// test logic
+		}
+});
