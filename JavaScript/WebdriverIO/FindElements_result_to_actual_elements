@@ -1,0 +1,10 @@
+// gets you an array of JSON bullshit
+
+let arr = await browser.$$(
+  'button[data-test-id="dcp-cars-buy-box__main-cta"]'
+);
+
+let lastElement = arr[arr.length - 1];
+
+
+await console.log(await $(lastElement).getText());
