@@ -1,3 +1,7 @@
 # escape double quotes
 
 message:"action \"serviceImageUpload\" failed"
+
+# finds field with string value that starts with "example", like "example23woohoo8372"
+
+field:"example*"
