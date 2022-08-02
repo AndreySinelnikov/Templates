@@ -1,0 +1,15 @@
+# Model looks like this: 
+
+{
+  "Group": string($int64)
+  "ID": string,
+  "Number": string($int64)
+}
+
+# only ID is required. Sending request with empty Group and Number would be:
+
+{
+  "Group": null,
+  "ID": 123456,
+  "Number": null
+}
