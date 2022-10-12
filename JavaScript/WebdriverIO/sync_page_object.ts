@@ -12,6 +12,12 @@ class PageObject {
     elem.waitForDisplayed();
     return elem;
   }
+  
+  get elementByText(): WebdriverIO.Element {
+    const elem = $("//*[.='Text']");
+    elem.waitForDisplayed();
+    return elem;
+  }
 
   // Actions
   //--------------------------------------------------------------------------------------------------------------------
