@@ -37,6 +37,11 @@ class PageObject {
   expectElementContainsText(text: string): void {
     expect(this.uniquePageElement).toHaveTextContaining(text);
   }
+  
+  @step()
+  expectSuccessMessage(): void {
+    expect(this.successMessage.isExisting()).toBeTruthy();
+  }
 }
 
 export default new PageObject();
