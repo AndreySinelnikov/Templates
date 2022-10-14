@@ -1,0 +1,1 @@
+fgrep -o <character> <file> | wc -l
