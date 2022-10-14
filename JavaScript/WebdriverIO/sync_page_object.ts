@@ -28,7 +28,7 @@ class PageObject {
   // Actions
   //--------------------------------------------------------------------------------------------------------------------
   actionEncompassingMultipleElements(): void {
-    this.uniquePageElement.scrollIntoView();
+    this.uniquePageElement.moveTo();
     this.firstElement.click();
   }
 
