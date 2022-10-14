@@ -18,6 +18,12 @@ class PageObject {
     elem.waitForDisplayed();
     return elem;
   }
+  
+  get elementContainingText(): WebdriverIO.Element {
+    const elem = $("//p[contains(text(), 'Text substring')]");
+    elem.waitForDisplayed();
+    return elem;
+  }
 
   // Actions
   //--------------------------------------------------------------------------------------------------------------------
