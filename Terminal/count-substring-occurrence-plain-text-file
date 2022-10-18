@@ -1,0 +1,1 @@
+fgrep -o <substring> <file> | wc -l
