@@ -1,0 +1,13 @@
+# param - timeout in seconds
+
+rundir(){
+for f in $PWD/*
+do
+	echo "Running $f"
+	<command> $f
+	wait
+	echo "Sleeping $1 seconds"
+	sleep $1
+done
+}
+alias rundir='rundir'
