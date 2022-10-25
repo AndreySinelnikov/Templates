@@ -31,6 +31,12 @@ class PageObject {
     this.uniquePageElement.moveTo();
     this.firstElement.click();
   }
+  
+  callMethodForEachArrayElement(): void {
+    $$('multiple-result-selector').forEach((elem) => {
+      elem.waitForExist();
+    });
+  }
 
   // Assertions
   //--------------------------------------------------------------------------------------------------------------------
