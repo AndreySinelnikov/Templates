@@ -44,9 +44,23 @@ class PageObject {
     expect(this.uniquePageElement).toHaveTextContaining(text);
   }
   
-  @step()
   expectSuccessMessage(): void {
     expect(this.successMessage.isExisting()).toBeTruthy();
+  }
+  
+  // Actions with hacks
+
+  actionWithHacks(): void {
+    // скрытие элемента, перехватывающего клик
+    const hideElem = this.uniquePageElement;
+    browser.execute((hideElem) => {
+      hideElem.style.display = 'none';
+    }, hideElem);
+
+    // кликаем в правый нижний угол элемента, чтобы обойти ещё одно перехватывание
+    const xoffset = Math.trunc(this.firstPhoto.getSize('width') / 2) - 1;
+    const yoffset = Math.trunc(this.firstPhoto.getSize('height') / 2) - 1;
+    this.firstElement.click({ x: xoffset, y: yoffset });
   }
 }
 
