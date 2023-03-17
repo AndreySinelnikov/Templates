@@ -1,0 +1,5 @@
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
+
+echo -e "\e[1;31mHello World\e[0m"
+# \e[1;31 - 31 is a color code
+# \e[0m - reset text formatting back
